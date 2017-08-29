@@ -1,0 +1,27 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>Tell us about your Campervan</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <div fxLayout="column">
+      <md-input-container>
+        <input mdInput placeholder="Where is your Campervan located?" type="text" [ngModel]="(van|async)?.where" (ngModelChange)="van.update({where: $event})"
+          name="where">
+      </md-input-container>
+      <div fxLayout="row">
+        <md-input-container>
+          <input mdInput placeholder="Year" type="number" [ngModel]="(van|async)?.year" (ngModelChange)="van.update({year: $event})"
+            name="year">
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="Make" type="text" [ngModel]="(van|async)?.make" (ngModelChange)="van.update({make: $event})"
+            name="make">
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="Model" type="text" [ngModel]="(van|async)?.model" (ngModelChange)="van.update({model: $event})"
+            name="model">
+        </md-input-container>
+      </div>
+    </div>
+  </md-card-content>
+</md-card>

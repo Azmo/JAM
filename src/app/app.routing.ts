@@ -5,6 +5,7 @@ import { AuthGuard } from './auth/auth-guard.service';
 import { LoginComponent } from './auth/login';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home';
+import { LeaseComponent } from './lease/lease.component';
 import { PageNotFoundComponent } from './page.not.found';
 
 const appRoutes: Routes = [
@@ -18,6 +19,11 @@ const appRoutes: Routes = [
         path: '',
         component: HomeComponent,
         data: { title: 'JAM' },
+    }, {
+        path: 'Lease',
+        canActivate: [AuthGuard],
+        component: LeaseComponent,
+        data: { title: 'Lease' },
     },
     {
         path: '**',
