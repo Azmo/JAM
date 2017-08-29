@@ -9,12 +9,12 @@
                 <input style="width: 400px;" mdInput placeholder="Where" type="text" name="where">
             </md-input-container>
             <md-input-container>
-                <input mdInput [mdDatepickerFilter]="futureDatesOnly" [mdDatepicker]="from" placeholder="From" [(ngModel)]="fromDate">
+                <input mdInput [mdDatepickerFilter]="futureDatesOnly" [mdDatepicker]="from" placeholder="From">
                 <button style="margin-right: 20px" mdSuffix [mdDatepickerToggle]="from"></button>
             </md-input-container>
             <md-datepicker #from></md-datepicker>
             <md-input-container>
-                <input mdInput [mdDatepickerFilter]="futureDatesOnly" [mdDatepicker]="until" placeholder="Until" [(ngModel)]="untilDate">
+                <input mdInput [mdDatepickerFilter]="futureDatesOnly" [mdDatepicker]="until" placeholder="Until">
                 <button style="margin-right: 20px" mdSuffix [mdDatepickerToggle]="until"></button>
             </md-input-container>
             <md-datepicker #until></md-datepicker>
