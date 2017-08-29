@@ -1,6 +1,7 @@
 {
   "projects": {
-    "dev": "jam-dev",
-    "prod": "jam-test"
+    "dev": "jam-dev-80fe6",
+    "prod": "jam-test",
+    "default": "jam-dev-80fe6"
   }
 }
