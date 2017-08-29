@@ -21,12 +21,12 @@ import { PageNotFoundComponent } from './page.not.found';
 
 // Must export the config
 export const firebaseConfig = {
-  apiKey: 'XXX-D5GEN0RJGPKH0R4YrD-gPbk9wfGk-k',
-  authDomain: 'jam-dev.firebaseapp.com',
-  databaseURL: 'https://jam-dev.firebaseio.com',
-  projectId: 'jam-dev',
-  storageBucket: 'jam-dev.appspot.com',
-  messagingSenderId: '1005944715430',
+  apiKey: 'AIzaSyDRSdunMkfd-oQzSkx97kP-V5lauWyAOk4',
+  authDomain: 'jam-dev-80fe6.firebaseapp.com',
+  databaseURL: 'https://jam-dev-80fe6.firebaseio.com',
+  projectId: 'jam-dev-80fe6',
+  storageBucket: 'jam-dev-80fe6.appspot.com',
+  messagingSenderId: '786198031392',
 };
 
 @NgModule({
