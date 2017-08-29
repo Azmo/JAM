@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "jam-dev",
+    "prod": "jam-test"
+  }
+}
