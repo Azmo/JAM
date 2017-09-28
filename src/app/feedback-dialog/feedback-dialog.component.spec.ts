@@ -6,7 +6,7 @@
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule, MdDialog, MdDialogModule, MdDialogRef, MdIconModule } from '@angular/material';
+import { MdDialog, MdDialogModule, MdDialogRef, MdIconModule } from '@angular/material';
 
 import { FeedbackDialogComponent } from './feedback-dialog.component';
 
@@ -18,7 +18,6 @@ describe('FeedbackDialogComponent', () => {
     TestBed.configureTestingModule({
       declarations: [FeedbackDialogComponent],
       imports: [
-        MaterialModule,
         FormsModule,
       ],
     })

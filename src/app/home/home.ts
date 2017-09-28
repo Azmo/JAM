@@ -12,11 +12,6 @@ export class HomeComponent implements OnInit {
     from: Date;
     until: Date;
 
-    futureDatesOnly = (d: Date): boolean => {
-        const day = d.getDay();
-        return moment(Date.now()).diff(d, 'days') < 1 && day !== 0 && day !== 6;
-    }
-
     constructor(private db: AngularFireDatabase) { }
 
     ngOnInit() {

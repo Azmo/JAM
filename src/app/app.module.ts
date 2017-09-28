@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import {
-  MaterialModule,
   MdButtonModule,
+  MdCheckboxModule,
   MdDatepickerModule,
   MdDialog,
+  MdIconModule,
   MdIconRegistry,
   MdInputModule,
   MdMenuModule,
@@ -57,9 +58,10 @@ export const firebaseConfig = {
     AppRouting,
     FormsModule,
     FlexLayoutModule,
-    MaterialModule,
     MdInputModule,
+    MdIconModule,
     MdToolbarModule,
+    MdCheckboxModule,
     MdButtonModule,
     MdMenuModule,
     MdTooltipModule,

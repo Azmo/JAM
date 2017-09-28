@@ -8,16 +8,16 @@
             <md-input-container>
                 <input style="width: 400px;" mdInput placeholder="Where" type="text" name="where">
             </md-input-container>
-            <md-input-container>
-                <input mdInput [mdDatepickerFilter]="futureDatesOnly" [mdDatepicker]="from" placeholder="From">
-                <button style="margin-right: 20px" mdSuffix [mdDatepickerToggle]="from"></button>
-            </md-input-container>
-            <md-datepicker #from></md-datepicker>
-            <md-input-container>
-                <input mdInput [mdDatepickerFilter]="futureDatesOnly" [mdDatepicker]="until" placeholder="Until">
-                <button style="margin-right: 20px" mdSuffix [mdDatepickerToggle]="until"></button>
-            </md-input-container>
-            <md-datepicker #until></md-datepicker>
+            <md-form-field>
+                <input mdInput [mdDatepicker]="from" placeholder="from">
+                <md-datepicker-toggle mdSuffix [for]="from"></md-datepicker-toggle>
+                <md-datepicker #from></md-datepicker>
+            </md-form-field>
+            <md-form-field>
+                <input mdInput [mdDatepicker]="until" placeholder="until">
+                <md-datepicker-toggle mdSuffix [for]="until"></md-datepicker-toggle>
+                <md-datepicker #until></md-datepicker>
+            </md-form-field>
             <button md-icon-button>
                 <md-icon>search</md-icon>
             </button>
