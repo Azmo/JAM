@@ -1,0 +1,48 @@
+<div fxLayout="column" fxFlex.gt-sm="960px" fxLayoutAlign="center">
+  <md-card>
+    <md-card-header>
+      <md-card-title>My Account</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <div fxLayout="column">
+        <md-input-container class="full-width">
+          <input mdInput placeholder="My Name" type="text" [ngModel]="(van|async)?.name" (ngModelChange)="van.update({name: $event})"
+            name="name">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Email" type="email" [ngModel]="(van|async)?.email" (ngModelChange)="van.update({email: $event})"
+            name="email">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Mobile" type="phone" [ngModel]="(van|async)?.mobile" (ngModelChange)="van.update({mobile: $event})"
+            name="mobile">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Address" type="text" [ngModel]="(van|async)?.address" (ngModelChange)="van.update({address: $event})"
+            name="address">
+        </md-input-container>
+      </div>
+    </md-card-content>
+  </md-card>
+  <md-card>
+    <md-card-header>
+      <md-card-title>About Me</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <div fxLayout="column">
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Self Description" type="text" [ngModel]="(van|async)?.description" (ngModelChange)="van.update({description: $event})"
+            name="description">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Why I Love Camping" type="text" [ngModel]="(van|async)?.why" (ngModelChange)="van.update({why: $event})"
+            name="why">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Favourite Camping Destination" type="text" [ngModel]="(van|async)?.destination" (ngModelChange)="van.update({destination: $event})"
+            name="destination">
+        </md-input-container>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

@@ -31,6 +31,7 @@ import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home';
 import { LeaseComponent } from './lease/lease.component';
 import { PageNotFoundComponent } from './page.not.found';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -51,6 +52,7 @@ export const firebaseConfig = {
     FeedbackDialogComponent,
     PageNotFoundComponent,
     LeaseComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

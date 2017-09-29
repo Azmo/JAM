@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from './auth/auth-guard.service';
 import { LoginComponent } from './auth/login';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home';
 import { LeaseComponent } from './lease/lease.component';
@@ -20,12 +21,16 @@ const appRoutes: Routes = [
         component: HomeComponent,
         data: { title: 'JAM' },
     }, {
+        path: 'Dashboard',
+        canActivate: [AuthGuard],
+        component: DashboardComponent,
+        data: { title: 'Dashboard' },
+    }, {
         path: 'Lease',
         canActivate: [AuthGuard],
         component: LeaseComponent,
         data: { title: 'Lease' },
-    },
-    {
+    }, {
         path: '**',
         component: PageNotFoundComponent,
         data: { title: 'Page Not Found' },
