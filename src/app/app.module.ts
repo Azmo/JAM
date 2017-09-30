@@ -11,6 +11,8 @@ import {
   MdInputModule,
   MdMenuModule,
   MdNativeDateModule,
+  MdOptionModule,
+  MdSelectModule,
   MdToolbarModule,
   MdTooltipModule,
 } from '@angular/material';
@@ -67,6 +69,8 @@ export const firebaseConfig = {
     MdButtonModule,
     MdMenuModule,
     MdTooltipModule,
+    MdOptionModule,
+    MdSelectModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

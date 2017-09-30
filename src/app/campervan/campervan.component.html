@@ -1,27 +1,83 @@
-<md-card>
-  <md-card-header>
-    <md-card-title>Tell us about your Campervan</md-card-title>
-  </md-card-header>
-  <md-card-content>
-    <div fxLayout="column">
-      <md-input-container>
-        <input mdInput placeholder="Where is your Campervan located?" type="text" [ngModel]="(van|async)?.where" (ngModelChange)="van.update({where: $event})"
-          name="where">
-      </md-input-container>
-      <div fxLayout="row">
-        <md-input-container>
-          <input mdInput placeholder="Year" type="number" [ngModel]="(van|async)?.year" (ngModelChange)="van.update({year: $event})"
-            name="year">
+<div fxLayout="column" fxFlex.gt-sm="960px" fxLayoutAlign="center">
+  <md-card>
+    <md-card-header>
+      <md-card-title>Tell us about your Campervan</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <div fxLayout="column">
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Where is your Campervan located?" type="text" [ngModel]="(van|async)?.where" (ngModelChange)="van.update({where: $event})"
+            name="where">
         </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="Make" type="text" [ngModel]="(van|async)?.make" (ngModelChange)="van.update({make: $event})"
-            name="make">
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="Model" type="text" [ngModel]="(van|async)?.model" (ngModelChange)="van.update({model: $event})"
-            name="model">
+        <div fxLayout="row">
+          <md-select placeholder="Type" [ngModel]="(van|async)?.type" (ngModelChange)="van.update({type: $event})" name="type">
+            <md-option *ngFor="let type of rvTypes" [value]="type">
+              {{ type }}
+            </md-option>
+          </md-select>
+          <md-input-container>
+            <input mdInput placeholder="Make" type="text" [ngModel]="(van|async)?.make" (ngModelChange)="van.update({make: $event})"
+              name="make">
+          </md-input-container>
+          <md-input-container>
+            <input mdInput placeholder="Model" type="text" [ngModel]="(van|async)?.model" (ngModelChange)="van.update({model: $event})"
+              name="model">
+          </md-input-container>
+          <md-input-container>
+            <input mdInput placeholder="Year" type="number" [ngModel]="(van|async)?.year" (ngModelChange)="van.update({year: $event})"
+              name="year">
+          </md-input-container>
+        </div>
+        <div fxLayout="row">
+          <md-input-container>
+            <input mdInput placeholder="Length" type="text" [ngModel]="(van|async)?.length" (ngModelChange)="van.update({length: $event})"
+              name="length">
+          </md-input-container>
+          <md-input-container>
+            <input mdInput placeholder="Internal Berths" type="number" [ngModel]="(van|async)?.internalBerths" (ngModelChange)="van.update({internalBerths: $event})"
+              name="internalBerths">
+          </md-input-container>
+          <md-input-container>
+            <input mdInput placeholder="External Berths" type="number" [ngModel]="(van|async)?.externalBerths" (ngModelChange)="van.update({externalBerths: $event})"
+              name="externalBerths">
+          </md-input-container>
+        </div>
+        <md-checkbox [ngModel]="(van|async)?.brakes" (ngModelChange)="van.update({brakes: $event})" name="brakes">Campervan has brakes for towing</md-checkbox>
+        <md-input-container class="full-width">
+          <textarea mdInput rows="5" placeholder="Specifications" type="text" [ngModel]="(van|async)?.specifications" (ngModelChange)="van.update({specifications: $event})"
+            name="specifications"></textarea>
         </md-input-container>
       </div>
-    </div>
-  </md-card-content>
-</md-card>
+    </md-card-content>
+  </md-card>
+  <md-card>
+    <md-card-header>
+      <md-card-title>Amenities</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <div>
+        <md-checkbox [ngModel]="(van|async)?.showerToilet" (ngModelChange)="van.update({showerToilet: $event})" name="showerToilet">Shower & Toilet</md-checkbox>
+        <md-input-container class="full-width">
+          <textarea mdInput rows="5" placeholder="Additional Information" type="text" [ngModel]="(van|async)?.additionalInformation"
+            (ngModelChange)="van.update({additionalInformation: $event})" name="additionalInformation"></textarea>
+        </md-input-container>
+      </div>
+    </md-card-content>
+  </md-card>
+  <md-card>
+    <md-card-header>
+      <md-card-title>Describe your RV</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <md-input-container class="full-width">
+        <input mdInput placeholder="What do you want to call your RV?" type="text" [ngModel]="(van|async)?.name" (ngModelChange)="van.update({name: $event})"
+          name="name">
+      </md-input-container>
+      <md-input-container class="full-width">
+        <textarea mdInput rows="5" placeholder="Describe why your RV is great" type="text" [ngModel]="(van|async)?.description" (ngModelChange)="van.update({description: $event})"
+          name="description"></textarea>
+      </md-input-container>
+    </md-card-content>
+  </md-card>
+
+</div>
