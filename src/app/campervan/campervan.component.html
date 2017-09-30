@@ -57,6 +57,25 @@
     <md-card-content>
       <div>
         <md-checkbox [ngModel]="(van|async)?.showerToilet" (ngModelChange)="van.update({showerToilet: $event})" name="showerToilet">Shower & Toilet</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.aircon" (ngModelChange)="van.update({aircon: $event})" name="aircon">Air Conditioner</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.cutlery" (ngModelChange)="van.update({cutlery: $event})" name="cutlery">Cutlery and Plates</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.pantry" (ngModelChange)="van.update({pantry: $event})" name="pantry">Basic Pantry</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.tea" (ngModelChange)="van.update({tea: $event})" name="tea">Coffee and Tea</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.microwave" (ngModelChange)="van.update({microwave: $event})" name="microwave">Microwave</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.fridge" (ngModelChange)="van.update({fridge: $event})" name="fridge">Fridge</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.coffeeMachine" (ngModelChange)="van.update({coffeeMachine: $event})" name="coffeeMachine">Coffee Machine</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.heating" (ngModelChange)="van.update({heating: $event})" name="heating">Heating</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.gas" (ngModelChange)="van.update({gas: $event})" name="gas">Gas Bottle</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.solarPanels" (ngModelChange)="van.update({solarPanels: $event})" name="solarPanels">Solar Panels</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.bikeRack" (ngModelChange)="van.update({bikeRack: $event})" name="bikeRack">Bike Rack</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.outdoorKitchen" (ngModelChange)="van.update({outdoorKitchen: $event})" name="outdoorKitchen">Outdoor Kitchen</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.stereo" (ngModelChange)="van.update({stereo: $event})" name="stereo">Stereo</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.satelliteTV" (ngModelChange)="van.update({satelliteTV: $event})" name="satelliteTV">Satellite TV</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.bbq" (ngModelChange)="van.update({bbq: $event})" name="bbq">BBQ</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.annex" (ngModelChange)="van.update({annex: $event})" name="annex">Annex</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.awning" (ngModelChange)="van.update({awning: $event})" name="awning">Awning</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.reversingCamera" (ngModelChange)="van.update({reversingCamera: $event})" name="reversingCamera">Reversing Camera</md-checkbox>
+        <md-checkbox [ngModel]="(van|async)?.campingTableChairs" (ngModelChange)="van.update({campingTableChairs: $event})" name="campingTableChairs">Camping Table and Chairs</md-checkbox>
         <md-input-container class="full-width">
           <textarea mdInput rows="5" placeholder="Additional Information" type="text" [ngModel]="(van|async)?.additionalInformation"
             (ngModelChange)="van.update({additionalInformation: $event})" name="additionalInformation"></textarea>
