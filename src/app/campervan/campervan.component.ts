@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-lease',
-  templateUrl: './lease.component.html',
-  styleUrls: ['./lease.component.css'],
+  selector: 'app-campervan',
+  templateUrl: './campervan.component.html',
+  styleUrls: ['./campervan.component.css'],
 })
-export class LeaseComponent implements OnInit {
+export class CampervanComponent implements OnInit {
   van: FirebaseObjectObservable<any>;
 
   constructor(private db: AngularFireDatabase) { }

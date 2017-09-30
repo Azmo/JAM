@@ -26,12 +26,12 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { LoginComponent } from './auth/login';
+import { CampervanComponent } from './campervan/campervan.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.component';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home';
-import { LeaseComponent } from './lease/lease.component';
 import { PageNotFoundComponent } from './page.not.found';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -51,7 +51,7 @@ export const firebaseConfig = {
     HomeComponent,
     FeedbackDialogComponent,
     PageNotFoundComponent,
-    LeaseComponent,
+    CampervanComponent,
     DashboardComponent,
   ],
   imports: [

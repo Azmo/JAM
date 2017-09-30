@@ -6,19 +6,19 @@
     <md-card-content>
       <div fxLayout="column">
         <md-input-container class="full-width">
-          <input mdInput placeholder="My Name" type="text" [ngModel]="(van|async)?.name" (ngModelChange)="van.update({name: $event})"
+          <input mdInput placeholder="My Name" type="text" [ngModel]="(dashboard|async)?.name" (ngModelChange)="dashboard.update({name: $event})"
             name="name">
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput placeholder="Email" type="email" [ngModel]="(van|async)?.email" (ngModelChange)="van.update({email: $event})"
+          <input mdInput placeholder="Email" type="email" [ngModel]="(dashboard|async)?.email" (ngModelChange)="dashboard.update({email: $event})"
             name="email">
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput placeholder="Mobile" type="phone" [ngModel]="(van|async)?.mobile" (ngModelChange)="van.update({mobile: $event})"
+          <input mdInput placeholder="Mobile" type="phone" [ngModel]="(dashboard|async)?.mobile" (ngModelChange)="dashboard.update({mobile: $event})"
             name="mobile">
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput placeholder="Address" type="text" [ngModel]="(van|async)?.address" (ngModelChange)="van.update({address: $event})"
+          <input mdInput placeholder="Address" type="text" [ngModel]="(dashboard|async)?.address" (ngModelChange)="dashboard.update({address: $event})"
             name="address">
         </md-input-container>
       </div>
@@ -31,18 +31,48 @@
     <md-card-content>
       <div fxLayout="column">
         <md-input-container class="full-width">
-          <input mdInput placeholder="Self Description" type="text" [ngModel]="(van|async)?.description" (ngModelChange)="van.update({description: $event})"
-            name="description">
+          <textarea mdInput rows="5" placeholder="Self Description" type="text" [ngModel]="(dashboard|async)?.description" (ngModelChange)="dashboard.update({description: $event})"
+            name="description"></textarea>
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput placeholder="Why I Love Camping" type="text" [ngModel]="(van|async)?.why" (ngModelChange)="van.update({why: $event})"
-            name="why">
+          <textarea mdInput rows="5" placeholder="Why I Love Camping" type="text" [ngModel]="(dashboard|async)?.why" (ngModelChange)="dashboard.update({why: $event})"
+            name="why"></textarea>
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput placeholder="Favourite Camping Destination" type="text" [ngModel]="(van|async)?.destination" (ngModelChange)="van.update({destination: $event})"
-            name="destination">
+          <textarea mdInput rows="5" placeholder="Favourite Camping Destination" type="text" [ngModel]="(dashboard|async)?.destination"
+            (ngModelChange)="dashboard.update({destination: $event})" name="destination"></textarea>
         </md-input-container>
       </div>
     </md-card-content>
   </md-card>
+  <md-card>
+    <md-card-header>
+      <md-card-title>Driver Details</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <div fxLayout="column">
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Vehicle Towing Capacity" type="text" [ngModel]="(dashboard|async)?.towingCapacity" (ngModelChange)="dashboard.update({towingCapacity: $event})"
+            name="towingCapacity">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Vehicle Towball Load Capacity" type="text" [ngModel]="(dashboard|async)?.towballLoad" (ngModelChange)="dashboard.update({towballLoad: $event})"
+            name="towballLoad">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Vehicle Insurance Details" type="text" [ngModel]="(dashboard|async)?.insurance" (ngModelChange)="dashboard.update({insurance: $event})"
+            name="insurance">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Driver's License" type="text" [ngModel]="(dashboard|async)?.driverLicense" (ngModelChange)="dashboard.update({driverLicense: $event})"
+            name="driverLicense">
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Car Registration" type="text" [ngModel]="(dashboard|async)?.carRego" (ngModelChange)="dashboard.update({carRego: $event})"
+            name="carRego">
+        </md-input-container>
+      </div>
+    </md-card-content>
+  </md-card>
+
 </div>
